@@ -9,9 +9,9 @@ type
     open: bool
     cntAround: int
 
-const mapW = 10
-const mapH = 10
-const cntMines = 5
+const mapW = 15
+const mapH = 15
+const cntMines = 25
 const winSizeX = 500
 const winSizeY = 500
 
@@ -189,7 +189,7 @@ proc drawGame(): void =
 discard glfwInit()
 glfwWindowHint(GLFWResizable, GLFW_TRUE)
 
-var window = glfwCreateWindow(winSizeX, winSizeY, "САПЁРЧИК ЕМАЕ")
+var window = glfwCreateWindow(winSizeX, winSizeY, "GAME ENGINE")
 window.setWindowSizeLimits(winSizeX, winSizeY, winSizeX, winSizeY)
 discard window.setKeyCallback(GLFWKeyFun(keypress))
 discard window.setMouseButtonCallback(GLFWMousebuttonFun(mouse))
