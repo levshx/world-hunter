@@ -94,7 +94,7 @@ var resolution_width = temp2.width
 var resolution_height = temp2.height
 echo "width " & $resolution_width & " px. (" & $(mm_width) & " mm.)"
 echo "height " & $resolution_height  & " px. (" & $(mm_height) & " mm.)" & "\n"
-var window = glfwCreateWindow(resolution_width-960, resolution_height-540, "GAME ENGINE") # создание окошка
+var window = glfwCreateWindow(resolution_width, resolution_height, "GAME ENGINE", monitor) # создание окошка
 
 discard window.setKeyCallback(GLFWKeyFun(esc))
 window.makeContextCurrent
